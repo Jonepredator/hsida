@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="J-ONE tattoo artist from sweden, black and grey, different styles, info, contact, portfolio">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <title>J-ONE • Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="contact.js" defer></script>
+</head>
+<body id="contact">
+    
+    <header>
+        <nav class="top-bar">
+            <a href="index.html" class="logo">J-ONE<br>tattoo</a>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="pfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="contact">
+        <div class="banner-text">
+            <form class="banner-text-items" onsubmit="return validation()">
+                <h2>Contact Me</h2>
+                <p>
+                    For bookings or if you have a question regarding tattoos in general
+                </p>
+                <div id="error_message"></div>
+                <label>
+                    <input type="text" placeholder="Your Name Here" id="name">
+                    <input type="text" placeholder="Your Email Here" id="email">
+                    <textarea cols="20" rows="20" placeholder="Your Message Here" id="message"></textarea>
+                    <input class="btn" type="submit" value="SEND">
+                </label>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="back-to-top">
+                <a href="#contact"><i class="fas fa-chevron-up"></i></a>
+            </div>
+            <div class="footer-content">
+                <div class="footer-content-about animate-up">
+                    <h3>want to see more</h3>
+                    <div class="asterisk"><i class="fas fa-asterisk"></i></div>
+                </div>
+                <div class="footer-content-divider animate-bottom"></div>
+            </div>
+        
+            <div class="social-media">
+                <h4>Follow me on social media</h4>
+                <ul class="social-icons">
+                    <li>
+                        <a href="#"><i class="fab fa-facebook-square"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/fuenzalidatattoo/"><i class="fab fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
