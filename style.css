@@ -12,6 +12,10 @@
     height: auto;
 }
 
+.top-bar .menu-btn{
+    display: none;
+}
+
 .logo {
     color: rgb(0, 0, 0);
     flex: 1;
@@ -57,6 +61,7 @@
 .menu ul li a:hover, .menu ul li a:active {
     font-size: 2em;
     transition: ease-out .3s;
+    text-shadow: 2px 2px 20px cadetblue;
 }
 
 
@@ -144,7 +149,7 @@
 .main1 h2 {
     font-family: 'Orbitron', sans-serif;
     letter-spacing: 2px;
-    background-color: rgba(95, 158, 160, 0.3);
+    background: radial-gradient(circle, rgba(95,158,160,0.665703781512605) 0%, rgba(95,158,160,0) 100%);;
     padding: .5rem;
 }
 
@@ -383,7 +388,7 @@ footer {
 
 /* media query */
 
-@media all and (max-width:600px) {
+@media all and (max-width:750px) {
     .top-bar {
         flex-direction: column;
         text-align: center;
@@ -393,17 +398,103 @@ footer {
         padding: 18px 0 0;
     }
 
+    .top-bar ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+        /* background-color: red; */
+    }
+
+    .top-bar ul a{
+        display: block;
+        padding: 10px;
+        
+    }
+
+    .top-bar .logo{
+        display: block;
+        font-size: 3em;
+        padding: 10px 20px;
+    }
+
+    .top-bar .menu ul{
+        clear: both;
+        max-height: 0;
+        transition: max-height 1s ease out;
+    }
+
+    .top-bar .menu{
+        transition: max-height 1s ease out;
+    }
+
+    .top-bar .menu-icon{
+        padding: 25px 20px;
+        cursor: pointer;
+        transition: background 0.5s ease-out;
+    }
+
+    .top-bar .menu-icon .nav-icon{
+        background: rgb(0, 0, 0);
+        display: block;
+        height: 4px;
+        width: 20px;
+        position: relative;
+        transition: background 0.5s ease-out;
+    }
+
+    .top-bar .menu-icon .nav-icon:before{
+        background: rgb(0, 0, 0);
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        transition: all 0.5s ease-out;
+        top: 7px;
+    }
+
+    .top-bar .menu-icon .nav-icon:after{
+        background: rgb(0, 0, 0);
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        transition: all 0.5s ease-out;
+        top: -7px;
+    }
+
+    .top-bar .menu-btn:checked ~ .menu ul{
+        max-height: 400px;
+        z-index: 100;
+    }
+
+    .top-bar .menu-btn:checked ~ .menu-icon .nav-icon{
+        background: transparent;
+    }
+
+    .top-bar .menu-btn:checked ~ .menu-icon .nav-icon:before{
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    .top-bar .menu-btn:checked ~ .menu-icon .nav-icon:after{
+        transform: rotate(45deg);
+        top: 0;
+    }
+
     .menu ul {
         flex-direction: column;
         margin-top: 0;
+        /* float: left; */
     }
 
-    .menu ul li {
-        padding: 5px;
-    }
+    /* banner */
 
     .banner-text-items {
         width: 80%;
+        /* z-index: ; */
     }
 
     .banner-text-items h2 {
@@ -444,6 +535,8 @@ footer {
     footer {
         padding: 3rem 0 1rem 0;
     }
+
+
 }
 
 /* Animations */
