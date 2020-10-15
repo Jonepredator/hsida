@@ -300,7 +300,7 @@
 
 /* footer */
 footer {
-    padding: 3rem 0;
+    padding: 3rem 0 1rem;
     background-color: #121212;
     color: #fff;
     text-align: center;
@@ -364,7 +364,7 @@ footer {
 
 .social-icons {
     list-style: none;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
     display: flex;
     justify-content: center;
 }
@@ -409,7 +409,6 @@ footer {
     .top-bar ul a{
         display: block;
         padding: 10px;
-        
     }
 
     .top-bar .logo{
@@ -418,21 +417,16 @@ footer {
         padding: 10px 20px;
     }
 
-    
     .top-bar .menu ul{
         clear: both;
         max-height: 0;
-        transition: max-height 1s ease out;
-    }
-
-    .top-bar .menu{
-        transition: max-height 1s ease out;
+        transition: max-height 1s ease-out;
     }
 
     .top-bar .menu-icon{
         padding: 25px 20px;
         cursor: pointer;
-        transition: background 0.5s ease-out;
+        /* transition: background 0.5s ease-out; */
     }
 
     .top-bar .menu-icon .nav-icon{
@@ -483,6 +477,18 @@ footer {
     .top-bar .menu-btn:checked ~ .menu-icon .nav-icon:after{
         transform: rotate(45deg);
         top: 0;
+    }
+
+    .top-bar .menu-btn:checked ~ .top-bar .menu ul li a:before{
+        display: none;
+    }
+
+    .top-bar .menu-btn:checked ~ .top-bar .menu ul li a:after{
+        animation: scale 2s forwards;
+    }
+
+    .menu {
+        padding-bottom: 40px;
     }
 
     .menu ul {
